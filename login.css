@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+    
+}
+body{
+    background-color: rgb(225, 243, 229);
+    
+}
+
+/*--- navbar for some links----*/
+
+.navbar{
+   background:linear-gradient(to right, #17d0cf 0%, #01a6fd 51%, #17d0cf 100%);
+   position:fixed;
+   width: 100%;
+   display: inline-flex;
+   transition:2s;
+   z-index: 20;
+}
+.navbarbuttons{
+    text-align: right;
+    position:absolute;
+    top:20px;
+    right:40px;
+    transition: 2s;
+}
+#navbaropen{
+    display: none;
+    cursor: pointer;
+}
+#navbaropen ul{
+    list-style: none;
+    display: inline-block;
+    border: 1px solid white;
+    padding:0px 5px;
+    border-radius: 5px;
+}
+#navbaropen ul li{
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0px;
+    
+}
+#navbarclose{
+    display: none;
+    cursor: pointer;
+    transition: 2s;
+}
+#navbarclose ul:hover,#navbaropen ul:hover{
+    background-color: teal;
+    transform: scale(1.1);
+}
+#navbarclose ul{
+    list-style: none;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 15px 5px;
+    border-radius: 5px;
+}
+#navbarclose ul li{
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    margin-top: 2px;
+    transform: rotate(45deg);
+}
+#navbarclose ul li:last-child{
+    transform: rotate(135deg);
+    margin-top: -2px;
+}
+.navbarimg img{
+   width: 150px;
+   padding: 5px;
+  transition:2s;
+}
+.navbarlink{
+    width: 100%;
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 10px;
+    transition:2s;
+}
+.navbarlink ul{
+    list-style: none;
+    display: inline-flex;
+    text-align: right;
+}
+.navbarlink ul li{
+    margin:10px;
+    
+
+}
+.navbarlink ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+}
+.navbarlink ul li a:hover{
+    border-bottom: 4px solid green;
+}
+
+/*----- login form------*/
+.loginpage{
+    text-align: center;
+    border:1px solid black;
+    position:relative;
+    
+}
+.loginpage1{
+    
+    margin:200px 20%;
+    max-width:500px;
+    padding:20px 10px;
+    background-color: rgb(10, 217, 245);
+    box-shadow: 2px 2px 10px 2px black;
+}
+.loginpage1 h2{
+    color: brown;
+    padding:20px 0px;
+}
+#Login-form{
+    width: 100%;
+    padding:10px 0px;
+}
+.form-control{
+    margin:30px 0px;
+    width: 60%;
+    padding:10px 0px;
+    border-radius: 5px;
+ }
+ .form-control:hover{
+     transform: scale(1.01);
+     box-shadow: 2px 2px 2px 2px black;
+ }
+ .form-control-submit{
+     background-color:brown;
+     margin: 20px 0px;
+     padding:10px 20px;
+     color: white;
+     font-weight: bold;
+     font-size: large;
+     border: none;
+     border-radius: 10px;
+     transition: .2s;
+ }
+ .form-control-submit:hover{
+     background-color: coral;
+     box-shadow: 2px 2px 2px 2px black;
+ }
+ .show-password{
+     margin:5px;
+     color: white;
+ }
+/*--------whatsapp fixed button on screen----*/
+.whatsappbutton img{
+    width:40px;
+    position: fixed;
+    bottom:50px;
+    right: 20px;
+    z-index: 21;
+    
+}
+.whatsappbutton a{
+    display: none;
+}
+/*----footer page-----*/
+.footerpage{
+    background-color: black;
+    opacity: 0.9;
+    color: white;
+    text-align: center;
+    width: 100%;
+    
+}
+.footerpage h3{
+    padding: 20px 0px;
+}
+
+/*--screen size 700px--*/
+@media(max-width:700px){
+    /*-- navbar button screen --*/
+     .navbarlink{
+         display: none;
+         position: fixed;
+         background-color: black;
+         opacity: .9;
+         top:0;
+         margin-top: 0px;
+         margin-right: 0px;
+         animation:example;
+         animation-duration: 2s;
+         height:100%;
+         right: 0;
+         width: 250px;
+     }
+     @keyframes example {
+         0%{
+             width: 0px;
+         }
+         100%{
+             width: 250px;
+         }
+     }
+     .navbarlink ul{
+         display:inline-block;
+         width: 100%;
+         text-align: center;
+     }
+     .navbarlink ul li{
+         margin-top: 30px;
+         
+     }
+     #navbaropen{
+         display:block;
+     }
+     #navbarclose{
+         display:none;
+         position: fixed;
+         color: white;
+         z-index: 21;
+         top:20px;
+         animation: example1;
+         animation-duration: 2s;
+         right: 200px; 
+     }
+     @keyframes example1 {
+         0%{
+             right:-10px;
+         }
+         100%{
+             right: 200px;
+         }
+     }
+
+ /*----------- login page-----------------*/
+     .loginpage1{
+         margin: 200px 5%;
+     }
+    }

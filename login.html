@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Prince || Login</title>
+</head>
+<body>
+   
+    <!--home nav bar for some links-->
+    <div class="navbar" id="navbar">
+      <div class="navbarbuttons" id="navbarbuttons">
+         <i id="navbaropen" onclick="opennavbar()"><ul><li></li><li></li><li></li></ul></i>
+         <i id="navbarclose" onclick="closenavbar()"><ul><li></li><li></li></ul></i>
+      </div>
+       <div class="navbarimg">
+           <img src="logo/logo.png" id="logo">
+       </div>
+       <div class="navbarlink" id="navbarlink">
+         <ul>
+             <li><a href="index.html">Home</a></li>
+             <li><a href="#">Gellery</a></li>
+             <li><a href="index.html#aboutschool">About</a></li>
+             <li><a href="index.html#contactus">Contact Us</a></li>
+             <li><a href="login.html">Login</a></li>
+         </ul>
+       </div>
+    </div>
+    <!--loginpage-->
+    <div class="loginpage">
+        <div class="loginpage1">
+        <h2>User Login</h2>
+        <form action="login.php" method="POST" id="Login-form">
+            <input type="text" name="email" class="form-control" placeholder="Login Id" required>
+            <br>
+            <input type="password" name="password" id="myInput" class="form-control" placeholder="Password" required>
+            <br>
+            <input type="checkbox" onclick="myfunction()" class="show-password">Show password</input>
+            <br>
+            <input type="submit" class="form-control-submit" value="Login">
+            
+        </form>
+        </div>
+    </div>
+  
+    <!--whatsapp fixed button on screen-->
+    <div class="whatsappbutton">
+      <a href="https://wa.me/+919413512850" id="whatsapp2"><img src="logo/whatsapp.png"></a>
+    </div>
+   <!--footer copyrigth-->
+   <div class="footerpage">
+     <h3>Copyright ©2021 Prince All Rights Reeserved</h3>
+
+   </div>
+   <script>
+   window.onscroll=function(){scrollFunction()};
+
+   function scrollFunction(){
+       if(document.body.scrollTop>1||document.documentElement.scrollTop>1)
+       {
+           document.getElementById("logo").style.width="100px";
+           document.getElementById("navbarbuttons").style.top="10px";
+           document.getElementById("whatsapp2").style.display="block";
+          
+       }
+     
+       else{
+           document.getElementById("logo").style.width="150px";
+           document.getElementById("navbarbuttons").style.top="20px";
+           document.getElementById("whatsapp2").style.display="none";
+       }
+       
+   }
+   function opennavbar(){
+     document.getElementById("navbarlink").style.display="block";
+     document.getElementById("navbarclose").style.display="block";
+     document.getElementById("navbaropen").style.display="none";
+   }
+   function closenavbar(){
+       document.getElementById("navbarlink").style.display="none";
+     document.getElementById("navbarclose").style.display="none";
+     document.getElementById("navbaropen").style.display="block";
+   }
+   function myfunction(){
+     var x=document.getElementById("myInput");
+     if(x.type=="password"){
+       x.type="text";
+     }
+     else{
+       x.type="password";
+     }
+   }
+   </script>
+</body>
+</html>

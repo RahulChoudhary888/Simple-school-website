@@ -1,0 +1,639 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+    
+}
+body{
+    background-color: rgb(225, 243, 229);
+}
+/*----nav contact css -----*/
+.navcontact{
+    background-color: rgb(249, 251, 252);
+    text-align: center;
+    
+}
+.navcontact a{
+    text-decoration: none;
+    color: black;
+    display:inline-flex;
+    margin-right: 20px;
+}
+.navcontact a h5{
+    margin-top: 10px;
+    font-size: 18px;
+}
+.navcontact a img{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+/*--- navbar for some links----*/
+
+.navbar{
+   background:linear-gradient(to right, #17d0cf 0%, #01a6fd 51%, #17d0cf 100%);
+   position: relative;
+   width: 100%;
+   display: inline-flex;
+   transition:2s;
+   z-index: 20;
+}
+.navbarbuttons{
+    text-align: right;
+    position:absolute;
+    top:20px;
+    right:40px;
+    transition: 2s;
+}
+#navbaropen{
+    display: none;
+    cursor: pointer;
+}
+#navbaropen ul{
+    list-style: none;
+    display: inline-block;
+    border: 1px solid white;
+    padding:0px 5px;
+    border-radius: 5px;
+}
+#navbaropen ul li{
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0px;
+    
+}
+#navbarclose{
+    display: none;
+    cursor: pointer;
+    transition: 2s;
+}
+#navbarclose ul:hover,#navbaropen ul:hover{
+    background-color: teal;
+    transform: scale(1.1);
+}
+#navbarclose ul{
+    list-style: none;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 15px 5px;
+    border-radius: 5px;
+}
+#navbarclose ul li{
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    margin-top: 2px;
+    transform: rotate(45deg);
+}
+#navbarclose ul li:last-child{
+    transform: rotate(135deg);
+    margin-top: -2px;
+    
+}
+.navbarimg img{
+   width: 150px;
+   padding: 5px;
+  transition:2s;
+}
+.navbarlink{
+    width: 100%;
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 10px;
+    transition:2s;
+}
+.navbarlink ul{
+    list-style: none;
+    display: inline-flex;
+    text-align: right;
+}
+.navbarlink ul li{
+    margin:10px;
+    
+
+}
+.navbarlink ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+}
+.navbarlink ul li a:hover{
+    border-bottom: 4px solid green;
+}
+
+
+/*-- image slider ---*/
+.imageslider{
+    width:100%;
+    
+}
+.mySlides{
+    text-align: center;
+    width:100%;
+    display: none;
+    
+}
+.mySlides .timeline{
+    position: relative;
+    height:6px;
+    margin-bottom: -5px;
+    background-color:rgb(192, 7, 7);
+    animation-name: timeline;
+    animation-duration: 5s;
+    transition:5s;
+    
+}
+/*-- time line---*/
+@keyframes timeline{
+    0%{
+     width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+.mySlides .numbertext{
+    position:absolute;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    margin-top:30px;
+}
+.mySlides img{
+   width:100%;
+   max-height: 600px;
+   box-shadow: 0px 0px 10px 2px black;
+}
+.mySlides .text{
+    position:absolute;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    margin-top: -50px;
+    color:white;
+    text-transform:capitalize;
+
+    
+}
+/*-------on load page------*/
+#onloadpage{
+    width: 100%;
+    position: fixed;
+    z-index: 22;
+    text-align: center;
+    animation: onload;
+    animation-duration: 5s;
+    
+}
+@keyframes onload{
+    0%{
+        margin-top:-400px;
+    }
+    100%{
+        margin-top: 0px;
+    }
+}
+.onloadpagemain{
+    max-width:60%;
+    margin: 0px 20%;
+    background-color: black;
+    opacity: .8;
+    border-radius: 10px;
+    
+}
+.onloadpagemain h2{
+    color: white;
+    text-transform: capitalize;
+    font-size:32px;
+    padding:50px 0px;
+}
+.onloadpagemain h4{
+    color: white;
+    text-transform: capitalize;
+    font-size: 28px;
+    padding-bottom: 20px;
+}
+#onloadpageclose{
+    float: right;
+    margin: 10px;
+}
+#onloadpageclose ul{
+    list-style: none;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 15px 5px;
+    border-radius: 5px;
+}
+#onloadpageclose ul li{
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    margin-top: 2px;
+    transform: rotate(45deg);
+}
+#onloadpageclose ul li:last-child{
+    transform: rotate(135deg);
+    margin-top: -2px;
+}
+#onloadpageclose ul:hover{
+    background-color: teal;
+    transform: scale(1.1);
+}
+/*-- school name --*/
+.schoolname{
+    background-color: rgb(1, 1, 46);
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+}
+
+/*---important links---*/
+.importantlink{
+    background-color: rgb(231, 188, 17);
+    box-shadow: 2px 2px 10px 2px black;
+    margin-top: 40px;
+}
+.importantlink ul{
+    list-style: none;
+    display: inline-flex;
+}
+.importantlink ul img{
+    width:30px;
+    height: 30px;
+    margin-right:10px;
+}
+.importantlink ul li a{
+    margin-right:50px;
+    text-decoration: none;
+    padding: 5px;
+    display: inline-flex;
+}
+.importantlink ul li h5{
+    color: white;
+    text-transform: capitalize;
+    font-size: large;
+    margin-top: 5px;
+}
+/*---director message---*/
+.directorheading{
+    text-transform: capitalize;
+    margin: 50px 0px;
+    text-align: center;
+    color: brown;
+    width: 100%;
+}
+.director{
+    width: 100%;
+    display: inline-flex;
+    text-align: center;
+    
+}
+
+.director1{
+    display: inline-flex;
+    text-align: center;
+    padding:30px 10px;
+    margin:0 15px;
+    background-color: rgb(11, 144, 253);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 2px black;
+}
+.directorphoto img{
+    width:200px;
+    margin: 5px;
+    border: 4px solid white;
+    box-shadow: 2px 2px 10px 2px black;
+    border-radius: 10px;
+}
+
+.director2{
+    display: inline-flex;
+    text-align: center;
+    padding:30px 10px;
+    margin:0 15px;
+    background-color:  rgb(11, 144, 253);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 2px black;
+}
+.directormessage h2{
+   text-transform: capitalize;
+   margin: 20px 5px;
+   color: white;
+}
+.directormessage p{
+    font-size: large;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: white;
+   
+}
+/*---about school---*/
+.aboutheading{
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 60px 40px 0px 0px;
+    font-size: 28px;
+    color: brown;
+} 
+.aboutschool{
+    
+    width: 100%;
+    display: inline-block;
+    
+}
+.aboutschool1,.aboutschool2{
+    width: 100%;
+    display: inline-flex;
+    text-align: center;
+    margin: 30px 0px;
+    
+}
+.aboutschool11{
+    box-shadow: 2px 2px 10px 2px rgb(215, 4, 243);
+    border-radius: 10px;
+    animation: light;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    text-align:center;
+    width: 100%;
+    margin:50px;
+    cursor: pointer;
+    transition: .2s;
+    background-color: white;
+    
+}
+@keyframes light{
+    0%{
+        box-shadow: 2px 2px 10px 2px rgb(215, 4, 243);
+       
+        
+    }
+    25%{
+        box-shadow: 2px 2px 10px 2px rgb(243, 4, 135);
+        
+    }
+    50%{
+        box-shadow: 2px 2px 10px 2px rgb(4, 243, 231);
+    }
+    75%{
+        box-shadow: 2px 2px 10px 2px rgb(4, 243, 96);
+    }
+}
+.aboutschool11:hover{
+   transform: scale(1.05);
+   
+}
+.aboutschool11 img{
+    width:100%; 
+    max-height: 220px;
+    border-radius: 10px 10px 0px 0px; 
+    border-bottom: 1px solid black;  
+}
+.aboutschool11 h2{
+    margin:20px 0px;
+    text-transform: capitalize;
+    color: brown;
+}
+.aboutschool11 p{
+    text-transform: capitalize;
+    font-size: larger;
+    margin:20px 0px;
+}
+/*---  contact us page-----*/
+.contactheading{
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 40px 40px 0px 0px;
+    font-size: 28px;
+    color: brown;
+}
+.contactus{
+    display: inline-flex;
+    width: 100%;
+    text-align: center;
+    background-color: cadetblue;
+    padding: 30px 0px;
+}
+.location{
+    width:50%;
+}
+.location h3{
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 22px;
+    margin:30px 0px;
+    color: brown;
+}
+.location img:hover{
+    cursor: pointer;
+    animation: imgrotation;
+    animation-duration:1s;
+    
+
+}
+@keyframes imgrotation{
+0%{
+    transform: scale(1);
+    
+}
+50%{
+    transform: scale(1.8);
+}
+100%{
+    transform:scale(1);
+}
+}
+.location address{
+    
+    word-spacing: 5px;
+    text-transform: capitalize;
+    font-size: large;
+    line-height: 2;
+}
+.quickconctat{
+    width: 50%;
+
+}
+.quickconctat h3{
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 22px;
+    margin:30px 0px;
+    color: brown;
+}
+#contact-form{
+    margin: 20px 0px;
+    width: 100%;
+}
+.form-control{
+   margin:20px 10px;
+   width: 60%;
+   padding: 10px 0px;
+   border-radius: 5px;
+}
+.form-control:hover{
+    transform: scale(1.01);
+    box-shadow: 2px 2px 2px 2px black;
+}
+.form-control-submit{
+    background-color:brown;
+    padding:10px 20px;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    border: none;
+    border-radius: 10px;
+    transition: .2s;
+}
+.form-control-submit:hover{
+    background-color: coral;
+    box-shadow: 2px 2px 2px 2px black;
+}
+/*--------whatsapp fixed button on screen----*/
+.whatsappbutton img{
+    width:40px;
+    position: fixed;
+    bottom:50px;
+    right: 20px;
+    z-index: 21;
+    
+}
+
+.whatsappbutton a{
+    display: none;
+}
+
+/*----footer page-----*/
+.footerpage{
+    background-color: black;
+    opacity: 0.9;
+    color: white;
+    text-align: center;
+    width: 100%;
+    
+}
+.footerpage h3{
+    padding: 20px 0px;
+}
+
+/*--- screen size 1200px ---*/
+@media(max-width:1200px){
+    .director1,.director2{
+        display:block;
+    }
+    .aboutschool11{
+        margin: 20px;
+    }
+}
+
+/*--screen size 700px--*/
+@media(max-width:700px){
+   /*-- navbar button screen --*/
+    .navbarlink{
+        display: none;
+        position: fixed;
+        background-color: black;
+        opacity: .9;
+        top:0;
+        margin-top: 0px;
+        margin-right: 0px;
+        animation:example;
+        animation-duration: 2s;
+        height:100%;
+        right: 0;
+        width: 250px;
+    }
+    @keyframes example {
+        0%{
+            width: 0px;
+        }
+        100%{
+            width: 250px;
+        }
+    }
+    .navbarlink ul{
+        display:inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    .navbarlink ul li{
+        margin-top: 30px;
+        
+    }
+    #navbaropen{
+        display:block;
+    }
+    #navbarclose{
+        display:none;
+        position: fixed;
+        color: white;
+        z-index: 21;
+        top:20px;
+        animation: example1;
+        animation-duration: 2s;
+        right: 200px; 
+    }
+    @keyframes example1 {
+        0%{
+            right:-10px;
+        }
+        100%{
+            right: 200px;
+        }
+    }
+    /*--image slider --*/
+    .mySlides .numbertext{
+        margin-top: 10px;
+    }
+    .mySlides img{
+        max-height: 500px;
+        min-height: 300px;
+    }
+    /*-- director message---*/
+    .director{
+        display:block;
+        
+
+    }
+    .director1,.director2{
+        margin:40px 20px;
+    }
+
+    /*about school----*/
+    .aboutschool{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .aboutschool1,.aboutschool2{
+        display: block;
+        
+        text-align: center;
+        
+    }
+    .aboutschool11{
+        width:80%;
+        margin:30px 10%;
+    }
+/*---  contact us page-----*/
+.contactus{
+    display: block;
+}
+.quickconctat,.location{
+    width: 100%;
+}
+/*---------on load page----------*/
+.onloadpagemain{
+    max-width:90%;
+    margin: 0px 5%;
+    
+}
+}
